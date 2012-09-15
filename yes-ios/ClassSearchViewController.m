@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  ClassSearchViewController.m
 //  yes-ios
 //
 //  Created by Matt Cooley on 9/15/12.
 //  Copyright (c) 2012 VandyMobile. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ClassSearchViewController.h"
 
-@interface ViewController ()
+@interface ClassSearchViewController ()
 
 @end
 
-@implementation ViewController
+@implementation ClassSearchViewController
 
 - (void)viewDidLoad
 {
