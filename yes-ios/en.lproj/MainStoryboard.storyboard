@@ -1,45 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12B19" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="aXr-L5-eqN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C54" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="aXr-L5-eqN">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
-        <!--Schedule View Controller - Schedule-->
-        <scene sceneID="tFz-aY-Ar6">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wa4-Uw-xCB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="k1g-gC-dUh" customClass="ScheduleViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vmZ-xD-JRt">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Schedule" id="4gh-dV-Xfe"/>
-                    <navigationItem key="navigationItem" id="Y1y-T6-Hce"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="869" y="-198"/>
-        </scene>
-        <!--Class Search View Controller - Class Search-->
-        <scene sceneID="5">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
-                <viewController id="2" customClass="ClassSearchViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Class Search" id="P4d-8r-hRj"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="843" y="471"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="6Cn-NH-XjN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YG7-U6-toS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController id="aXr-L5-eqN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -48,18 +16,73 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="viewControllers" id="JvV-tX-dSY"/>
-                        <segue destination="k1g-gC-dUh" kind="relationship" relationship="viewControllers" id="lTr-qK-h7Z"/>
+                        <segue destination="1iq-Rx-dsc" kind="relationship" relationship="viewControllers" id="BcE-LD-4t1"/>
+                        <segue destination="9AS-gZ-Ei3" kind="relationship" relationship="viewControllers" id="eCB-7i-dG9"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YG7-U6-toS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="213" y="173"/>
+            <point key="canvasLocation" x="221" y="67"/>
+        </scene>
+        <!--Table View Controller - Root View Controller-->
+        <scene sceneID="4uq-r1-fJT">
+            <objects>
+                <tableViewController id="vRt-0b-tmz" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="nPl-qY-oQ2">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="fk6-Rd-dV8">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="N7W-gv-4Ul"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3rr-7W-9Yi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1331" y="415"/>
+        </scene>
+        <!--Schedule View Controller - My Schedule-->
+        <scene sceneID="yGC-pK-a2g">
+            <objects>
+                <viewController id="9AS-gZ-Ei3" customClass="ScheduleViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h6J-6m-cwx">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Schedule" id="95z-Dx-TeJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o4l-Cu-r1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869" y="-196"/>
+        </scene>
+        <!--Navigation Controller - Class Search-->
+        <scene sceneID="GAg-ej-mIW">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="1iq-Rx-dsc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Class Search" id="Y4v-vC-IoN"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2c5-Wl-Jsj">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vRt-0b-tmz" kind="relationship" relationship="rootViewController" id="2xz-jP-ISq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0yM-uv-sMa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869" y="415"/>
         </scene>
     </scenes>
     <classes>
-        <class className="ClassSearchViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ClassSearchViewController.h"/>
-        </class>
         <class className="ScheduleViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ScheduleViewController.h"/>
         </class>
