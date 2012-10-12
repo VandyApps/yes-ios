@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ClassSearchViewController : UIViewController
+@interface ClassSearchViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+{
+    NSArray* dummySections;
+    NSArray* dummyRows;
+}
 
 @end
