@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D6EF043163782D000547787 /* ClassDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6EF042163782D000547787 /* ClassDetailController.m */; };
 		CDACEC4C16050EFF004C0917 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDACEC4B16050EFF004C0917 /* UIKit.framework */; };
 		CDACEC4E16050EFF004C0917 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDACEC4D16050EFF004C0917 /* Foundation.framework */; };
 		CDACEC5016050EFF004C0917 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDACEC4F16050EFF004C0917 /* CoreGraphics.framework */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D6EF041163782D000547787 /* ClassDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassDetailController.h; sourceTree = "<group>"; };
+		3D6EF042163782D000547787 /* ClassDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassDetailController.m; sourceTree = "<group>"; };
 		CDACEC4716050EFF004C0917 /* yes-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yes-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDACEC4B16050EFF004C0917 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CDACEC4D16050EFF004C0917 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -54,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				CDACEC5116050EFF004C0917 /* yes-ios */,
+				CDACEC5216050EFF004C0917 /* Supporting Files */,
 				CDACEC4A16050EFF004C0917 /* Frameworks */,
 				CDACEC4816050EFF004C0917 /* Products */,
 			);
@@ -87,7 +91,8 @@
 				CDACEC691605130E004C0917 /* ScheduleViewController.m */,
 				CDACEC6016050EFF004C0917 /* ClassSearchViewController.h */,
 				CDACEC6116050EFF004C0917 /* ClassSearchViewController.m */,
-				CDACEC5216050EFF004C0917 /* Supporting Files */,
+				3D6EF041163782D000547787 /* ClassDetailController.h */,
+				3D6EF042163782D000547787 /* ClassDetailController.m */,
 			);
 			path = "yes-ios";
 			sourceTree = "<group>";
@@ -101,6 +106,7 @@
 				CDACEC5916050EFF004C0917 /* yes-ios-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = "yes-ios";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +176,7 @@
 				CDACEC5C16050EFF004C0917 /* AppDelegate.m in Sources */,
 				CDACEC6216050EFF004C0917 /* ClassSearchViewController.m in Sources */,
 				CDACEC6A1605130E004C0917 /* ScheduleViewController.m in Sources */,
+				3D6EF043163782D000547787 /* ClassDetailController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

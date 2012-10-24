@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="221" y="67"/>
         </scene>
-        <!--Class Search View Controller - Root View Controller-->
+        <!--Class Search View Controller - Classes-->
         <scene sceneID="4uq-r1-fJT">
             <objects>
                 <tableViewController id="vRt-0b-tmz" customClass="ClassSearchViewController" sceneMemberID="viewController">
@@ -50,15 +50,57 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="Quo-Zy-2yT" kind="push" identifier="ShowClassDetail" id="GIM-zN-hPj"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="N7W-gv-4Ul"/>
+                    <navigationItem key="navigationItem" title="Classes" id="N7W-gv-4Ul"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3rr-7W-9Yi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1331" y="415"/>
+        </scene>
+        <!--Class Detail Controller - Class Detail-->
+        <scene sceneID="taf-AU-eey">
+            <objects>
+                <tableViewController id="Quo-Zy-2yT" customClass="ClassDetailController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="WlG-Nw-hcE">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ClassDetailCell" textLabel="bU0-oq-3Ug" style="IBUITableViewCellStyleDefault" id="JQC-Mv-p47">
+                                <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bU0-oq-3Ug">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Quo-Zy-2yT" id="lCZ-1r-ykj"/>
+                            <outlet property="delegate" destination="Quo-Zy-2yT" id="iSp-o0-j2e"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Class Detail" id="axU-gE-LvA"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R4h-Hh-zDQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1768" y="415"/>
         </scene>
         <!--Schedule View Controller - My Schedule-->
         <scene sceneID="yGC-pK-a2g">
@@ -93,6 +135,9 @@
         </scene>
     </scenes>
     <classes>
+        <class className="ClassDetailController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ClassDetailController.h"/>
+        </class>
         <class className="ClassSearchViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ClassSearchViewController.h"/>
         </class>
