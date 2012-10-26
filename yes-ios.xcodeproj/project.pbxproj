@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D4E810C1639E88F00FD54D0 /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E810B1639E88F00FD54D0 /* ItemCell.m */; };
+		3D4E810F1639F2D900FD54D0 /* SectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E810E1639F2D900FD54D0 /* SectionCell.m */; };
+		3D4E811D163A513700FD54D0 /* SectionHeaderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E811B163A513700FD54D0 /* SectionHeaderController.m */; };
+		3D4E811E163A513700FD54D0 /* SectionHeaderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4E811C163A513700FD54D0 /* SectionHeaderController.xib */; };
 		3D6EF043163782D000547787 /* ClassDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6EF042163782D000547787 /* ClassDetailController.m */; };
 		CDACEC4C16050EFF004C0917 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDACEC4B16050EFF004C0917 /* UIKit.framework */; };
 		CDACEC4E16050EFF004C0917 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDACEC4D16050EFF004C0917 /* Foundation.framework */; };
@@ -20,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D4E810A1639E88F00FD54D0 /* ItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCell.h; sourceTree = "<group>"; };
+		3D4E810B1639E88F00FD54D0 /* ItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCell.m; sourceTree = "<group>"; };
+		3D4E810D1639F2D900FD54D0 /* SectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionCell.h; sourceTree = "<group>"; };
+		3D4E810E1639F2D900FD54D0 /* SectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionCell.m; sourceTree = "<group>"; };
+		3D4E811A163A513700FD54D0 /* SectionHeaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SectionHeaderController.h; path = ../SectionHeaderController.h; sourceTree = "<group>"; };
+		3D4E811B163A513700FD54D0 /* SectionHeaderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SectionHeaderController.m; path = ../SectionHeaderController.m; sourceTree = "<group>"; };
+		3D4E811C163A513700FD54D0 /* SectionHeaderController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SectionHeaderController.xib; path = ../SectionHeaderController.xib; sourceTree = "<group>"; };
 		3D6EF041163782D000547787 /* ClassDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassDetailController.h; sourceTree = "<group>"; };
 		3D6EF042163782D000547787 /* ClassDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassDetailController.m; sourceTree = "<group>"; };
 		CDACEC4716050EFF004C0917 /* yes-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yes-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,10 +64,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D4E811F163A514300FD54D0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CDACEC5D16050EFF004C0917 /* MainStoryboard.storyboard */,
+				3D4E811C163A513700FD54D0 /* SectionHeaderController.xib */,
+			);
+			name = UI;
+			path = "yes-ios";
+			sourceTree = "<group>";
+		};
 		CDACEC3C16050EFF004C0917 = {
 			isa = PBXGroup;
 			children = (
 				CDACEC5116050EFF004C0917 /* yes-ios */,
+				3D4E811F163A514300FD54D0 /* UI */,
 				CDACEC5216050EFF004C0917 /* Supporting Files */,
 				CDACEC4A16050EFF004C0917 /* Frameworks */,
 				CDACEC4816050EFF004C0917 /* Products */,
@@ -86,13 +108,18 @@
 			children = (
 				CDACEC5A16050EFF004C0917 /* AppDelegate.h */,
 				CDACEC5B16050EFF004C0917 /* AppDelegate.m */,
-				CDACEC5D16050EFF004C0917 /* MainStoryboard.storyboard */,
 				CDACEC681605130E004C0917 /* ScheduleViewController.h */,
 				CDACEC691605130E004C0917 /* ScheduleViewController.m */,
 				CDACEC6016050EFF004C0917 /* ClassSearchViewController.h */,
 				CDACEC6116050EFF004C0917 /* ClassSearchViewController.m */,
 				3D6EF041163782D000547787 /* ClassDetailController.h */,
 				3D6EF042163782D000547787 /* ClassDetailController.m */,
+				3D4E810A1639E88F00FD54D0 /* ItemCell.h */,
+				3D4E810B1639E88F00FD54D0 /* ItemCell.m */,
+				3D4E810D1639F2D900FD54D0 /* SectionCell.h */,
+				3D4E810E1639F2D900FD54D0 /* SectionCell.m */,
+				3D4E811A163A513700FD54D0 /* SectionHeaderController.h */,
+				3D4E811B163A513700FD54D0 /* SectionHeaderController.m */,
 			);
 			path = "yes-ios";
 			sourceTree = "<group>";
@@ -162,6 +189,7 @@
 			files = (
 				CDACEC5616050EFF004C0917 /* InfoPlist.strings in Resources */,
 				CDACEC5F16050EFF004C0917 /* MainStoryboard.storyboard in Resources */,
+				3D4E811E163A513700FD54D0 /* SectionHeaderController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +205,9 @@
 				CDACEC6216050EFF004C0917 /* ClassSearchViewController.m in Sources */,
 				CDACEC6A1605130E004C0917 /* ScheduleViewController.m in Sources */,
 				3D6EF043163782D000547787 /* ClassDetailController.m in Sources */,
+				3D4E810C1639E88F00FD54D0 /* ItemCell.m in Sources */,
+				3D4E810F1639F2D900FD54D0 /* SectionCell.m in Sources */,
+				3D4E811D163A513700FD54D0 /* SectionHeaderController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

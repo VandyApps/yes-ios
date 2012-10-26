@@ -7,6 +7,9 @@
 //
 
 #import "ClassDetailController.h"
+#import "ItemCell.h"
+#import "SectionCell.h"
+#import "SectionHeaderController.h"
 
 
 @interface ClassDetailController ()
@@ -51,7 +54,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    creditHours = @"3";
+    creditHours = @"3 hours";
     description = @"Normally accompanied by 118b. Calculus-based introduction to general physics and its applications. Electricity and magnetism, optics, modern physics. Potential majors are strongly advised to take MATH 155b or a higher level calculus course. Prior study of calculus or concurrent enrollment in Math 150b or 155b is expected. [3] (MNS)";
     
     sectionDetails = @[ @{@"Prof" : @"Lawler",
@@ -100,47 +103,70 @@
         case 1:
             return 1;
         case 2:
-            return 4;
+            return 3;
             
         default:
             return 0;
     }
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (ItemCell *)itemCellForTableView:(UITableView *)tableView atPath:(NSIndexPath *)path
 {
-    static NSString *CellIdentifier = @"ClassDetailCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *ItemCellIdentifier = @"ItemCell";
+    ItemCell* cell = [tableView dequeueReusableCellWithIdentifier:ItemCellIdentifier forIndexPath:path];
     if (cell == nil)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[ItemCell alloc] init];
     }
-    NSString* textToShow;
     
+    cell.titleLabel.text = @"Credit";
+    cell.contentLabel.text = creditHours;
+    return cell;
+}
+
+- (UITableViewCell *)descriptionCellForTableView:(UITableView *)tableView atPath:(NSIndexPath *)path
+{
+    static NSString *DescriptionCellIdentifier = @"DescriptionCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:DescriptionCellIdentifier forIndexPath:path];
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:DescriptionCellIdentifier];
+    }
+    
+    cell.textLabel.text = description;
+    return cell;
+}
+
+- (SectionCell *)sectionCellForTableView:(UITableView *)tableView atPath:(NSIndexPath *)path
+{
+    static NSString *SectionCellIdentifier = @"SectionCell";
+    SectionCell *cell = [tableView dequeueReusableCellWithIdentifier:SectionCellIdentifier forIndexPath:path];
+    if (cell == nil)
+    {
+        cell = [[SectionCell alloc] init];
+    }
+    
+    NSDictionary *data = [sectionDetails objectAtIndex:path.row];
+    cell.profLabel.text = [data objectForKey:@"Prof"];
+    cell.dayLabel.text = [data objectForKey:@"Day"];
+    cell.timeLabel.text = [data objectForKey:@"Time"];
+    cell.locLabel.text = [data objectForKey:@"Location"];
+    return cell;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     switch (indexPath.section)
     {
         case 0:
-            textToShow = creditHours;
-            break;
+            return [self itemCellForTableView:tableView atPath:indexPath];
         case 1:
-            textToShow = description;
-            break;
+            return [self descriptionCellForTableView:tableView atPath:indexPath];
         case 2:
-            if (indexPath.row == 0)
-            {
-                textToShow = @"Cal  Facebook  Map";
-            }
-            else
-            {
-                textToShow = [[sectionDetails objectAtIndex:indexPath.row-1] objectForKey:@"Prof"];
-            }
-            break;
+            return [self sectionCellForTableView:tableView atPath:indexPath];
         default:
-            break;
+            return nil;
     }
-    cell.textLabel.text = textToShow;
-    
-    return cell;
 }
 
 /*
@@ -184,12 +210,35 @@
 
 #pragma mark - Table view delegate
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    if (section == 2)
+    {
+        return [[[SectionHeaderController alloc] init] view];
+    }
+    
+    return nil;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (section == 2)
+    {
+        return 55;
+    }
+    else
+    {
+        return 0;
+    }
+    
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Description section
     if (indexPath.section == 1)
     {
-        return tableView.rowHeight * 5;
+        return tableView.rowHeight * 4;
     }
     else
     {
