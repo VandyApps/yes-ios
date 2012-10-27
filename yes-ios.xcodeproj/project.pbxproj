@@ -11,6 +11,11 @@
 		3D4E810F1639F2D900FD54D0 /* SectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E810E1639F2D900FD54D0 /* SectionCell.m */; };
 		3D4E811D163A513700FD54D0 /* SectionHeaderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E811B163A513700FD54D0 /* SectionHeaderController.m */; };
 		3D4E811E163A513700FD54D0 /* SectionHeaderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4E811C163A513700FD54D0 /* SectionHeaderController.xib */; };
+		3D4E8127163B1D6600FD54D0 /* f_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D4E8126163B1D6600FD54D0 /* f_logo.png */; };
+		3D4E812D163B3E1800FD54D0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4E812C163B3E1800FD54D0 /* MapKit.framework */; };
+		3D4E8130163B3E1D00FD54D0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4E812F163B3E1D00FD54D0 /* CoreLocation.framework */; };
+		3D4E8141163BAAD000FD54D0 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E813F163BAAD000FD54D0 /* MapViewController.m */; };
+		3D4E8142163BAAD000FD54D0 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4E8140163BAAD000FD54D0 /* MapViewController.xib */; };
 		3D6EF043163782D000547787 /* ClassDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6EF042163782D000547787 /* ClassDetailController.m */; };
 		CDACEC4C16050EFF004C0917 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDACEC4B16050EFF004C0917 /* UIKit.framework */; };
 		CDACEC4E16050EFF004C0917 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDACEC4D16050EFF004C0917 /* Foundation.framework */; };
@@ -31,6 +36,12 @@
 		3D4E811A163A513700FD54D0 /* SectionHeaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SectionHeaderController.h; path = ../SectionHeaderController.h; sourceTree = "<group>"; };
 		3D4E811B163A513700FD54D0 /* SectionHeaderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SectionHeaderController.m; path = ../SectionHeaderController.m; sourceTree = "<group>"; };
 		3D4E811C163A513700FD54D0 /* SectionHeaderController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SectionHeaderController.xib; path = ../SectionHeaderController.xib; sourceTree = "<group>"; };
+		3D4E8126163B1D6600FD54D0 /* f_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f_logo.png; sourceTree = "<group>"; };
+		3D4E812C163B3E1800FD54D0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3D4E812F163B3E1D00FD54D0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3D4E813E163BAAD000FD54D0 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		3D4E813F163BAAD000FD54D0 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		3D4E8140163BAAD000FD54D0 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		3D6EF041163782D000547787 /* ClassDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassDetailController.h; sourceTree = "<group>"; };
 		3D6EF042163782D000547787 /* ClassDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassDetailController.m; sourceTree = "<group>"; };
 		CDACEC4716050EFF004C0917 /* yes-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yes-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D4E8130163B3E1D00FD54D0 /* CoreLocation.framework in Frameworks */,
+				3D4E812D163B3E1800FD54D0 /* MapKit.framework in Frameworks */,
 				CDACEC4C16050EFF004C0917 /* UIKit.framework in Frameworks */,
 				CDACEC4E16050EFF004C0917 /* Foundation.framework in Frameworks */,
 				CDACEC5016050EFF004C0917 /* CoreGraphics.framework in Frameworks */,
@@ -68,10 +81,19 @@
 			isa = PBXGroup;
 			children = (
 				CDACEC5D16050EFF004C0917 /* MainStoryboard.storyboard */,
+				3D4E8140163BAAD000FD54D0 /* MapViewController.xib */,
 				3D4E811C163A513700FD54D0 /* SectionHeaderController.xib */,
 			);
 			name = UI;
 			path = "yes-ios";
+			sourceTree = "<group>";
+		};
+		3D4E8124163B1D4800FD54D0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3D4E8126163B1D6600FD54D0 /* f_logo.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		CDACEC3C16050EFF004C0917 = {
@@ -79,6 +101,7 @@
 			children = (
 				CDACEC5116050EFF004C0917 /* yes-ios */,
 				3D4E811F163A514300FD54D0 /* UI */,
+				3D4E8124163B1D4800FD54D0 /* Resources */,
 				CDACEC5216050EFF004C0917 /* Supporting Files */,
 				CDACEC4A16050EFF004C0917 /* Frameworks */,
 				CDACEC4816050EFF004C0917 /* Products */,
@@ -96,6 +119,8 @@
 		CDACEC4A16050EFF004C0917 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D4E812C163B3E1800FD54D0 /* MapKit.framework */,
+				3D4E812F163B3E1D00FD54D0 /* CoreLocation.framework */,
 				CDACEC4B16050EFF004C0917 /* UIKit.framework */,
 				CDACEC4D16050EFF004C0917 /* Foundation.framework */,
 				CDACEC4F16050EFF004C0917 /* CoreGraphics.framework */,
@@ -120,6 +145,8 @@
 				3D4E810E1639F2D900FD54D0 /* SectionCell.m */,
 				3D4E811A163A513700FD54D0 /* SectionHeaderController.h */,
 				3D4E811B163A513700FD54D0 /* SectionHeaderController.m */,
+				3D4E813E163BAAD000FD54D0 /* MapViewController.h */,
+				3D4E813F163BAAD000FD54D0 /* MapViewController.m */,
 			);
 			path = "yes-ios";
 			sourceTree = "<group>";
@@ -190,6 +217,8 @@
 				CDACEC5616050EFF004C0917 /* InfoPlist.strings in Resources */,
 				CDACEC5F16050EFF004C0917 /* MainStoryboard.storyboard in Resources */,
 				3D4E811E163A513700FD54D0 /* SectionHeaderController.xib in Resources */,
+				3D4E8127163B1D6600FD54D0 /* f_logo.png in Resources */,
+				3D4E8142163BAAD000FD54D0 /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +237,7 @@
 				3D4E810C1639E88F00FD54D0 /* ItemCell.m in Sources */,
 				3D4E810F1639F2D900FD54D0 /* SectionCell.m in Sources */,
 				3D4E811D163A513700FD54D0 /* SectionHeaderController.m in Sources */,
+				3D4E8141163BAAD000FD54D0 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

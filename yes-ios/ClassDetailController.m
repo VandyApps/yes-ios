@@ -10,6 +10,7 @@
 #import "ItemCell.h"
 #import "SectionCell.h"
 #import "SectionHeaderController.h"
+#import "MapViewController.h"
 
 
 @interface ClassDetailController ()
@@ -17,6 +18,9 @@
     NSString* description;
     NSArray* sectionDetails;
     NSString* creditHours;
+    
+    NSIndexPath* selectedRow;
+    SectionHeaderController* secHead;
 }
 
 @end
@@ -34,8 +38,6 @@
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
-    NSLog(@"Here!");
-    
     self = [super initWithStyle:style];
     if (self)
     {
@@ -54,6 +56,9 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    secHead = [[SectionHeaderController alloc] init];
+    secHead.delegate = self;
+    
     creditHours = @"3 hours";
     description = @"Normally accompanied by 118b. Calculus-based introduction to general physics and its applications. Electricity and magnetism, optics, modern physics. Potential majors are strongly advised to take MATH 155b or a higher level calculus course. Prior study of calculus or concurrent enrollment in Math 150b or 155b is expected. [3] (MNS)";
     
@@ -66,7 +71,7 @@
     
     @{@"Prof" : @"Lawler",
     @"Loc" : @"SC 4309",
-    @"Time" : @"2:10a-3:00p",
+    @"Time" : @"2:10p-3:00p",
     @"Day" : @"MWF",
     @"Enrolled" : @37,
     @"Size" : @150},
@@ -150,7 +155,17 @@
     cell.profLabel.text = [data objectForKey:@"Prof"];
     cell.dayLabel.text = [data objectForKey:@"Day"];
     cell.timeLabel.text = [data objectForKey:@"Time"];
-    cell.locLabel.text = [data objectForKey:@"Location"];
+    cell.locLabel.text = [data objectForKey:@"Loc"];
+    
+    if([selectedRow isEqual:path])
+    {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    else
+    {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
     return cell;
 }
 
@@ -214,7 +229,7 @@
 {
     if (section == 2)
     {
-        return [[[SectionHeaderController alloc] init] view];
+        return [secHead view];
     }
     
     return nil;
@@ -240,6 +255,10 @@
     {
         return tableView.rowHeight * 4;
     }
+    if (indexPath.section == 2)
+    {
+        return tableView.rowHeight * 1.2;
+    }
     else
     {
         return tableView.rowHeight;
@@ -248,13 +267,43 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    // Uncheck the previous checked row
+    if(indexPath.section == 2)
+    {
+        if (selectedRow)
+        {
+            UITableViewCell* uncheckCell = [tableView cellForRowAtIndexPath:selectedRow];
+            uncheckCell.accessoryType = UITableViewCellAccessoryNone;
+        }
+        UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        selectedRow = indexPath;
+    }
+}
+
+#pragma mark - MapViewDelegate methods
+- (void)readyToDismiss
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+#pragma mark - SectionHeaderDelegate methods
+
+- (void)performActionFromCalendar
+{
+    NSLog(@"Calendar pressed");
+}
+
+- (void)performActionFromFacebook
+{
+    NSLog(@"Facebook pressed");
+}
+
+- (void)performActionFromMap
+{
+    MapViewController* mapView = [[MapViewController alloc] init];
+    mapView.delegate = self;
+    [self presentModalViewController:mapView animated:YES];
 }
 
 @end

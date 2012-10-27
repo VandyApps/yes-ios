@@ -35,4 +35,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Action methods
+
+- (IBAction)pressedCalButton:(id)sender
+{
+    [_delegate performActionFromCalendar];
+}
+
+- (IBAction)pressedFacebookButton:(id)sender
+{
+    [_delegate performActionFromFacebook];
+}
+
+- (IBAction)pressedMapButton:(id)sender
+{
+    [_delegate performActionFromMap];
+}
+
 @end
