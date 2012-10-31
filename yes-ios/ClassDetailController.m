@@ -9,7 +9,6 @@
 #import "ClassDetailController.h"
 #import "ItemCell.h"
 #import "SectionCell.h"
-#import "SectionHeaderController.h"
 #import "MapViewController.h"
 
 
@@ -20,7 +19,6 @@
     NSString* creditHours;
     
     NSIndexPath* selectedRow;
-    SectionHeaderController* secHead;
 }
 
 @end
@@ -56,8 +54,6 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    secHead = [[SectionHeaderController alloc] init];
-    secHead.delegate = self;
     
     creditHours = @"3 hours";
     description = @"Normally accompanied by 118b. Calculus-based introduction to general physics and its applications. Electricity and magnetism, optics, modern physics. Potential majors are strongly advised to take MATH 155b or a higher level calculus course. Prior study of calculus or concurrent enrollment in Math 150b or 155b is expected. [3] (MNS)";
@@ -229,7 +225,26 @@
 {
     if (section == 2)
     {
-        return [secHead view];
+        UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
+        
+        UIButton *calButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [calButton setFrame:CGRectMake(10, 0, 50, 44)];
+        [calButton setTitle:@"Cal" forState:UIControlStateNormal];
+        
+        UIButton *mapButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [mapButton setFrame:CGRectMake(260, 0, 50, 44)];
+        [mapButton setTitle:@"Map" forState:UIControlStateNormal];
+        [mapButton addTarget:self action:@selector(pressedMap:) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIButton *facebookButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [facebookButton setFrame:CGRectMake(205, 0, 44, 44)];
+        [facebookButton setImage:[UIImage imageNamed:@"f_logo.png"] forState:UIControlStateNormal];
+        
+        [header addSubview:calButton];
+        [header addSubview:mapButton];
+        [header addSubview:facebookButton];
+        
+        return header;
     }
     
     return nil;
@@ -239,13 +254,10 @@
 {
     if (section == 2)
     {
-        return 55;
+        return 50;
     }
-    else
-    {
-        return 0;
-    }
-    
+
+    return 0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -299,7 +311,7 @@
     NSLog(@"Facebook pressed");
 }
 
-- (void)performActionFromMap
+- (void)pressedMap:(id)sender
 {
     MapViewController* mapView = [[MapViewController alloc] init];
     mapView.delegate = self;

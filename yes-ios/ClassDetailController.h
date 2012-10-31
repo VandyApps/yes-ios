@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SectionHeaderController.h"
 #import "MapViewController.h"
 
 
 @interface ClassDetailController : UITableViewController
-    <UITableViewDataSource, UITableViewDelegate, SectionHeaderDelegate, MapViewDelegate>
+    <UITableViewDataSource, UITableViewDelegate, MapViewDelegate>
 
 @end

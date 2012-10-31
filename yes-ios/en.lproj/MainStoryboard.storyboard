@@ -516,7 +516,6 @@
         <class className="FacebookCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FacebookCell.h"/>
             <relationships>
-                <relationship kind="action" name="gotoFacebookPressed:"/>
                 <relationship kind="outlet" name="facebookButton" candidateClass="UIButton"/>
             </relationships>
         </class>
@@ -537,7 +536,6 @@
         <class className="NextClassCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NextClassCell.h"/>
             <relationships>
-                <relationship kind="action" name="mapButtonPressed:"/>
                 <relationship kind="outlet" name="classTitleLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="mapButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="timeUntilLabel" candidateClass="UILabel"/>
