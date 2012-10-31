@@ -16,7 +16,11 @@
 		3D4E8130163B3E1D00FD54D0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4E812F163B3E1D00FD54D0 /* CoreLocation.framework */; };
 		3D4E8141163BAAD000FD54D0 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E813F163BAAD000FD54D0 /* MapViewController.m */; };
 		3D4E8142163BAAD000FD54D0 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4E8140163BAAD000FD54D0 /* MapViewController.xib */; };
+		3D4E8152163BBF5400FD54D0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E8150163BBF5400FD54D0 /* LoginViewController.m */; };
 		3D6EF043163782D000547787 /* ClassDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6EF042163782D000547787 /* ClassDetailController.m */; };
+		3DF81B8F1640273500B0883F /* NextClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF81B8E1640273500B0883F /* NextClassCell.m */; };
+		3DF81B921640283700B0883F /* ClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF81B911640283700B0883F /* ClassCell.m */; };
+		3DF81B951640292600B0883F /* FacebookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF81B941640292600B0883F /* FacebookCell.m */; };
 		CDACEC4C16050EFF004C0917 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDACEC4B16050EFF004C0917 /* UIKit.framework */; };
 		CDACEC4E16050EFF004C0917 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDACEC4D16050EFF004C0917 /* Foundation.framework */; };
 		CDACEC5016050EFF004C0917 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDACEC4F16050EFF004C0917 /* CoreGraphics.framework */; };
@@ -42,8 +46,16 @@
 		3D4E813E163BAAD000FD54D0 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		3D4E813F163BAAD000FD54D0 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		3D4E8140163BAAD000FD54D0 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		3D4E814F163BBF5400FD54D0 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		3D4E8150163BBF5400FD54D0 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		3D6EF041163782D000547787 /* ClassDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassDetailController.h; sourceTree = "<group>"; };
 		3D6EF042163782D000547787 /* ClassDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassDetailController.m; sourceTree = "<group>"; };
+		3DF81B8D1640273500B0883F /* NextClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextClassCell.h; sourceTree = "<group>"; };
+		3DF81B8E1640273500B0883F /* NextClassCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextClassCell.m; sourceTree = "<group>"; };
+		3DF81B901640283700B0883F /* ClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassCell.h; sourceTree = "<group>"; };
+		3DF81B911640283700B0883F /* ClassCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassCell.m; sourceTree = "<group>"; };
+		3DF81B931640292600B0883F /* FacebookCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookCell.h; sourceTree = "<group>"; };
+		3DF81B941640292600B0883F /* FacebookCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookCell.m; sourceTree = "<group>"; };
 		CDACEC4716050EFF004C0917 /* yes-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yes-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDACEC4B16050EFF004C0917 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CDACEC4D16050EFF004C0917 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -96,6 +108,23 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		3DF81B8B164026E500B0883F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3D4E810A1639E88F00FD54D0 /* ItemCell.h */,
+				3D4E810B1639E88F00FD54D0 /* ItemCell.m */,
+				3D4E810D1639F2D900FD54D0 /* SectionCell.h */,
+				3D4E810E1639F2D900FD54D0 /* SectionCell.m */,
+				3DF81B8D1640273500B0883F /* NextClassCell.h */,
+				3DF81B8E1640273500B0883F /* NextClassCell.m */,
+				3DF81B901640283700B0883F /* ClassCell.h */,
+				3DF81B911640283700B0883F /* ClassCell.m */,
+				3DF81B931640292600B0883F /* FacebookCell.h */,
+				3DF81B941640292600B0883F /* FacebookCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		CDACEC3C16050EFF004C0917 = {
 			isa = PBXGroup;
 			children = (
@@ -139,14 +168,13 @@
 				CDACEC6116050EFF004C0917 /* ClassSearchViewController.m */,
 				3D6EF041163782D000547787 /* ClassDetailController.h */,
 				3D6EF042163782D000547787 /* ClassDetailController.m */,
-				3D4E810A1639E88F00FD54D0 /* ItemCell.h */,
-				3D4E810B1639E88F00FD54D0 /* ItemCell.m */,
-				3D4E810D1639F2D900FD54D0 /* SectionCell.h */,
-				3D4E810E1639F2D900FD54D0 /* SectionCell.m */,
 				3D4E811A163A513700FD54D0 /* SectionHeaderController.h */,
 				3D4E811B163A513700FD54D0 /* SectionHeaderController.m */,
 				3D4E813E163BAAD000FD54D0 /* MapViewController.h */,
 				3D4E813F163BAAD000FD54D0 /* MapViewController.m */,
+				3D4E814F163BBF5400FD54D0 /* LoginViewController.h */,
+				3D4E8150163BBF5400FD54D0 /* LoginViewController.m */,
+				3DF81B8B164026E500B0883F /* Cells */,
 			);
 			path = "yes-ios";
 			sourceTree = "<group>";
@@ -238,6 +266,10 @@
 				3D4E810F1639F2D900FD54D0 /* SectionCell.m in Sources */,
 				3D4E811D163A513700FD54D0 /* SectionHeaderController.m in Sources */,
 				3D4E8141163BAAD000FD54D0 /* MapViewController.m in Sources */,
+				3D4E8152163BBF5400FD54D0 /* LoginViewController.m in Sources */,
+				3DF81B8F1640273500B0883F /* NextClassCell.m in Sources */,
+				3DF81B921640283700B0883F /* ClassCell.m in Sources */,
+				3DF81B951640292600B0883F /* FacebookCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

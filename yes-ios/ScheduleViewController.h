@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginViewController.h"
 
-@interface ScheduleViewController : UIViewController
+@interface ScheduleViewController : UITableViewController <LoginViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @end
