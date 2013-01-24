@@ -24,6 +24,15 @@
     dummyRows = @[ @[@"Intro", @"Molecular Bio", @"Ecosystems"],
                    @[@"Composition", @"18th Century", @"Modern Lit"],
                    @[@"Intro", @"Nanomaterials", @"Thermodynamics"]];
+    
+    //below is test of xml plist
+    
+    NSString *pathToEnrolledClasses = [[NSBundle mainBundle] pathForResource: @"enrolledClasses" ofType:@"plist"];
+    
+    
+    NSArray *enrolledClasses = [[NSArray alloc] initWithContentsOfFile: pathToEnrolledClasses];
+    
+    NSLog(@"Length of array: %u", [enrolledClasses count]);
 }
 
 - (void)viewDidUnload

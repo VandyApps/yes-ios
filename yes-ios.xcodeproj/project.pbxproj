@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		211C4EBF16B0B517007B076A /* enrolledClasses.plist in Resources */ = {isa = PBXBuildFile; fileRef = 211C4EBE16B0B517007B076A /* enrolledClasses.plist */; };
 		3D4E810C1639E88F00FD54D0 /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E810B1639E88F00FD54D0 /* ItemCell.m */; };
 		3D4E810F1639F2D900FD54D0 /* SectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E810E1639F2D900FD54D0 /* SectionCell.m */; };
 		3D4E8127163B1D6600FD54D0 /* f_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D4E8126163B1D6600FD54D0 /* f_logo.png */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		211C4EBE16B0B517007B076A /* enrolledClasses.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = enrolledClasses.plist; sourceTree = "<group>"; };
 		3D4E810A1639E88F00FD54D0 /* ItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCell.h; sourceTree = "<group>"; };
 		3D4E810B1639E88F00FD54D0 /* ItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCell.m; sourceTree = "<group>"; };
 		3D4E810D1639F2D900FD54D0 /* SectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionCell.h; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				3D4E8126163B1D6600FD54D0 /* f_logo.png */,
+				211C4EBE16B0B517007B076A /* enrolledClasses.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				CDACEC5F16050EFF004C0917 /* MainStoryboard.storyboard in Resources */,
 				3D4E8127163B1D6600FD54D0 /* f_logo.png in Resources */,
 				3D4E8142163BAAD000FD54D0 /* MapViewController.xib in Resources */,
+				211C4EBF16B0B517007B076A /* enrolledClasses.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

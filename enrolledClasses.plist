@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf8" ?>
+
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>Class</key>
+            <string>Intro to Composition</string>
+            
+            <key>Prof</key>
+            <string>Henderson</string>
+            
+            <key>Day</key>
+            <string>MWF</string>
+            
+            <key>Time</key>
+            <string>11:10a-12:00p</string>
+            
+            <key>Location</key>
+            <string>Furman 212</string>
+            
+            <key>Code</key>
+            <string>Engl 110</string>
+            
+        </dict>
+        
+        <dict>
+            <key>Class</key>
+            <string>Programming Languages</string>
+            
+            <key>Prof</key>
+            <string>Roth</string>
+            
+            <key>Day</key>
+            <string>MWF</string>
+            
+            <key>Time</key>
+            <string>2:10p-3:00p</string>
+            
+            <key>Location</key>
+            <string>FGH 238</string>
+            
+            <key>Code</key>
+            <string>CS 270</string>
+            
+        </dict>
+        <dict>
+            <key>Class</key>
+            <string>Spanish Literature</string>
+            
+            <key>Prof</key>
+            <string>Garcia</string>
+            
+            <key>Day</key>
+            <string>MWF</string>
+            
+            <key>Time</key>
+            <string>10:10a-11:00a</string>
+            
+            <key>Location</key>
+            <string>Calhoun 110</string>
+            
+            <key>Code</key>
+            <string>Span 203</string>
+            
+        </dict>
+        
+        <dict>
+            <key>Class</key>
+            <string>Linear Algebra</string>
+            
+            <key>Prof</key>
+            <string>Chifan</string>
+            
+            <key>Day</key>
+            <string>TR</string>
+            
+            <key>Time</key>
+            <string>8:10a-9:25a</string>
+            
+            <key>Location</key>
+            <string>SC 1203</string>
+            
+            <key>Code</key>
+            <string>Math 204</string>
+            
+        </dict>
+        
+        <dict>
+            <key>Class</key>
+            <string>Calculus II</string>
+            
+            <key>Prof</key>
+            <string>Pigg</string>
+            
+            <key>Day</key>
+            <string>TR</string>
+            
+            <key>Time</key>
+            <string>9:35a-10:50a</string>
+            
+            <key>Location</key>
+            <string>SC 1314</string>
+            
+            <key>Code</key>
+            <string>Math 155b</string>
+            
+        </dict>
+    </array>
+</plist>
